@@ -4,6 +4,19 @@
 
 A [Go(Golang)](https://golang.org/) package for handling rate limiting.
 
+## Resource
+
+* [Features](#features)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Licensing](#licensing)
+* [Credits](#credits)
+	* [Contributors](#contributors)
+	* [Similar Projects](#similar-projects)
+
+## Features
+
 ## Installation
 
 To install the package, run the following command in your terminal:
