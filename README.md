@@ -1,36 +1,43 @@
-# hqgolimit
+# hq-go-limiter
 
-[![license](https://img.shields.io/badge/license-MIT-gray.svg?color=0040FF)](https://github.com/hueristiq/hqgolimit/blob/master/LICENSE) ![maintenance](https://img.shields.io/badge/maintained%3F-yes-0040ff.svg) [![open issues](https://img.shields.io/github/issues-raw/hueristiq/hqgolimit.svg?style=flat&color=0040ff)](https://github.com/hueristiq/hqgolimit/issues?q=is:issue+is:open) [![closed issues](https://img.shields.io/github/issues-closed-raw/hueristiq/hqgolimit.svg?style=flat&color=0040ff)](https://github.com/hueristiq/hqgolimit/issues?q=is:issue+is:closed) [![contribution](https://img.shields.io/badge/contributions-welcome-0040ff.svg)](https://github.com/hueristiq/hqgolimit/blob/master/CONTRIBUTING.md)
+![made with go](https://img.shields.io/badge/made%20with-Go-0000FF.svg) [![license](https://img.shields.io/badge/license-MIT-gray.svg?color=0000FF)](https://github.com/hueristiq/hq-go-limiter/blob/master/LICENSE) ![maintenance](https://img.shields.io/badge/maintained%3F-yes-0000FF.svg) [![open issues](https://img.shields.io/github/issues-raw/hueristiq/hq-go-limiter.svg?style=flat&color=0000FF)](https://github.com/hueristiq/hq-go-limiter/issues?q=is:issue+is:open) [![closed issues](https://img.shields.io/github/issues-closed-raw/hueristiq/hq-go-limiter.svg?style=flat&color=0000FF)](https://github.com/hueristiq/hq-go-limiter/issues?q=is:issue+is:closed) [![contribution](https://img.shields.io/badge/contributions-welcome-0000FF.svg)](https://github.com/hueristiq/hq-go-limiter/blob/master/CONTRIBUTING.md)
 
 A [Go(Golang)](https://golang.org/) package for handling rate limiting.
 
 ## Installation
 
-```
-go get -v -u github.com/hueristiq/hqgolimit
+To install the package, run the following command in your terminal:
+
+```bash
+go get -v -u github.com/hueristiq/hq-go-limiter
 ```
 
+This command will download and install the `hq-go-limiter` package into your Go workspace, making it available for use in your projects.
+
+
 ## Usage
+
+Here's a simple example demonstrating how to use `hq-go-limiter`:
 
 ```go
 package main
 
 import (
 	"fmt"
-	"github.com/hueristiq/hqgolimit"
+	limiter "github.com/hueristiq/hq-go-limiter"
 )
 
 func main() {
-	options := &hqgolimit.Options{
+	options := &limiter.Options{
 		RequestsPerMinute: 40,
 		MinimumDelayInSeconds: 2,
 	}
 
-	limiter := hqgolimit.New(options)
+	ltr := limiter.New(options)
 
 	// Make 10 requests and ensure that they are rate limited.
 	for i := 1; i <= 10; i++ {
-		limiter.Wait()
+		ltr.Wait()
 		fmt.Printf("Request %d made at %v\n", i, time.Now())
 	}
 }
@@ -38,8 +45,22 @@ func main() {
 
 ## Contributing
 
-[Issues](https://github.com/hueristiq/hqgolimit/issues) and [Pull Requests](https://github.com/hueristiq/hqgolimit/pulls) are welcome! **Check out the [contribution guidelines](./CONTRIBUTING.md)**.
+We welcome contributions! Feel free to submit [Pull Requests](https://github.com/hueristiq/hq-go-limiter/pulls) or report [Issues](https://github.com/hueristiq/hq-go-limiter/issues). For more details, check out the [contribution guidelines](https://github.com/hueristiq/hq-go-limiter/blob/master/CONTRIBUTING.md).
 
 ## Licensing
 
-This package is distributed under the [MIT license](https://github.com/hueristiq/hqgolimit/blob/master/LICENSE).
+This package is licensed under the [MIT license](https://opensource.org/license/mit). You are free to use, modify, and distribute it, as long as you follow the terms of the license. You can find the full license text in the repository - [Full MIT license text](https://github.com/hueristiq/hq-go-limiter/blob/master/LICENSE).
+
+## Credits
+
+### Contributors
+
+A huge thanks to all the contributors who have helped make `hq-go-limiter` what it is today!
+
+[![contributors](https://contrib.rocks/image?repo=hueristiq/hq-go-limiter&max=500)](https://github.com/hueristiq/hq-go-limiter/graphs/contributors)
+
+### Similar Projects
+
+If you're interested in more packages like this, check out:
+
+[Hashicorp's go-retryablehttp](https://github.com/hashicorp/go-retryablehttp) ◇ [Project Discovery's retryablehttp-go](https://github.com/projectdiscovery/retryablehttp-go) ◇ [Gojek's heimdall](https://github.com/gojek/heimdall) ◇ [Monaco's request](https://github.com/monaco-io/request) ◇ [Opus Domini's fast-shot](https://github.com/opus-domini/fast-shot)

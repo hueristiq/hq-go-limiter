@@ -1,37 +1,18 @@
-package hqgolimit
+package limiter
 
 import (
 	"sync"
 	"time"
 )
 
-// RateLimiter implements rate limiting to limit the number of requests made within a certain time period.
-type RateLimiter struct { //nolint:govet // To be refactored.
+type Limiter struct {
 	requestsPerMinute     int
 	minimumDelayInSeconds int
 	timeOfLastRequest     time.Time
 	lock                  sync.Mutex
 }
 
-// Options implements the structure of RateLimiter creation options.
-type Options struct {
-	RequestsPerMinute     int
-	MinimumDelayInSeconds int
-}
-
-// New creates a new *RateLimiter with the specified *Options.
-func New(options *Options) (limiter *RateLimiter) {
-	limiter = &RateLimiter{
-		requestsPerMinute:     options.RequestsPerMinute,
-		minimumDelayInSeconds: options.MinimumDelayInSeconds,
-		timeOfLastRequest:     time.Now(),
-	}
-
-	return
-}
-
-// Wait waits until the next request can be made within the rate limit.
-func (limiter *RateLimiter) Wait() {
+func (limiter *Limiter) Wait() {
 	limiter.lock.Lock()
 	defer limiter.lock.Unlock()
 
@@ -43,6 +24,7 @@ func (limiter *RateLimiter) Wait() {
 	if limiter.requestsPerMinute > 0 {
 		// calculate the minimum interval (in time.Duration units) that should be enforced between requests in order to comply with the rate limiting policy.
 		interval := time.Duration(time.Minute.Nanoseconds() / int64(limiter.requestsPerMinute))
+
 		// calculate the amount of time that the program needs to sleep before making another request, in order to comply with the rate limiting policy.
 		timeToSleep = interval - timeSinceLastRequest
 	}
@@ -53,9 +35,26 @@ func (limiter *RateLimiter) Wait() {
 		timeToSleep = minimumDelayInNanoseconds - timeSinceLastRequest
 	}
 
-	// sleep
+	if timeToSleep < 0 {
+		timeToSleep = 0
+	}
+
 	time.Sleep(timeToSleep)
 
-	// Update the last access time to the current time.
 	limiter.timeOfLastRequest = time.Now()
+}
+
+type Configuration struct {
+	RequestsPerMinute     int
+	MinimumDelayInSeconds int
+}
+
+func New(cfg *Configuration) (limiter *Limiter) {
+	limiter = &Limiter{
+		requestsPerMinute:     cfg.RequestsPerMinute,
+		minimumDelayInSeconds: cfg.MinimumDelayInSeconds,
+		timeOfLastRequest:     time.Now(),
+	}
+
+	return
 }
