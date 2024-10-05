@@ -63,4 +63,4 @@ A huge thanks to all the contributors who have helped make `hq-go-limiter` what 
 
 If you're interested in more packages like this, check out:
 
-[Hashicorp's go-retryablehttp](https://github.com/hashicorp/go-retryablehttp) ◇ [Project Discovery's retryablehttp-go](https://github.com/projectdiscovery/retryablehttp-go) ◇ [Gojek's heimdall](https://github.com/gojek/heimdall) ◇ [Monaco's request](https://github.com/monaco-io/request) ◇ [Opus Domini's fast-shot](https://github.com/opus-domini/fast-shot)
+[Uber's ratelimit](https://github.com/uber-go/ratelimit) ◇ [Project Discovery's ratelimit](https://github.com/projectdiscovery/ratelimit)
