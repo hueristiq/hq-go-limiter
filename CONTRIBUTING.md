@@ -11,11 +11,11 @@ Please review the following guidelines before contributing. Also, feel free to p
 
 ## Have a Question?
 
-Please don't open a GitHub issue for questions about how to use `hqgolimit`, as the goal is to use issues for managing bugs and feature requests. Issues that are related to general support will be closed.
+Please don't open a GitHub issue for questions about how to use `hq-go-limiter`, as the goal is to use issues for managing bugs and feature requests. Issues that are related to general support will be closed.
 
 ## Found a Bug?
 
-If you've identified a bug in `hqgolimit`, please [submit an issue](#create-an-issue) to our GitHub repo: [hueristiq/hqgolimit](https://github.com/hueristiq/hqgolimit/issues/new). Please also feel free to submit a [Pull Request](#pull-requests) with a fix for the bug!
+If you've identified a bug in `hq-go-limiter`, please [submit an issue](#create-an-issue) to our GitHub repo: [hueristiq/hq-go-limiter](https://github.com/hueristiq/hq-go-limiter/issues/new). Please also feel free to submit a [Pull Request](#pull-requests) with a fix for the bug!
 
 ## Have a Feature Request?
 
@@ -31,7 +31,7 @@ Assuming no existing issues exist, please ensure you include required informatio
 
 We may have additional questions and will communicate through the GitHub issue, so please respond back to our questions to help reproduce and resolve the issue as quickly as possible.
 
-New issues can be created with in our [GitHub repo](https://github.com/hueristiq/hqgolimit/issues/new).
+New issues can be created with in our [GitHub repo](https://github.com/hueristiq/hq-go-limiter/issues/new).
 
 ### Pull Requests
 
@@ -49,6 +49,6 @@ When submitting code, please make every effort to follow existing conventions an
 
 ### License
 
-By contributing your code, you agree to license your contribution under the terms of the [MIT License](https://github.com/hueristiq/hqgolimit/blob/master/LICENSE).
+By contributing your code, you agree to license your contribution under the terms of the [MIT License](https://github.com/hueristiq/hq-go-limiter/blob/master/LICENSE).
 
 All files are released with the MIT license.
