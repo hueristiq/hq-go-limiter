@@ -7,28 +7,17 @@ A [Go(Golang)](https://golang.org/) package for handling rate limiting.
 ## Resource
 
 * [Features](#features)
-* [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [Licensing](#licensing)
-* [Credits](#credits)
-	* [Contributors](#contributors)
-	* [Similar Projects](#similar-projects)
 
 ## Features
 
-## Installation
-
-To install the package, run the following command in your terminal:
+## Usage
 
 ```bash
-go get -v -u github.com/hueristiq/hq-go-limiter
+go get -v -u go.source.hueristiq.com/limiter
 ```
-
-This command will download and install the `hq-go-limiter` package into your Go workspace, making it available for use in your projects.
-
-
-## Usage
 
 Here's a simple example demonstrating how to use `hq-go-limiter`:
 
@@ -37,7 +26,7 @@ package main
 
 import (
 	"fmt"
-	limiter "github.com/hueristiq/hq-go-limiter"
+	"go.source.hueristiq.com/limiter"
 )
 
 func main() {
@@ -58,22 +47,12 @@ func main() {
 
 ## Contributing
 
-We welcome contributions! Feel free to submit [Pull Requests](https://github.com/hueristiq/hq-go-limiter/pulls) or report [Issues](https://github.com/hueristiq/hq-go-limiter/issues). For more details, check out the [contribution guidelines](https://github.com/hueristiq/hq-go-limiter/blob/master/CONTRIBUTING.md).
+Feel free to submit [Pull Requests](https://github.com/hueristiq/hq-go-limiter/pulls) or report [Issues](https://github.com/hueristiq/hq-go-limiter/issues). For more details, check out the [contribution guidelines](https://github.com/hueristiq/hq-go-limiter/blob/master/CONTRIBUTING.md).
+
+Huge thanks to the [contributors](https://github.com/hueristiq/hq-go-limiter/graphs/contributors) thus far!
+
+![contributors](https://contrib.rocks/image?repo=hueristiq/hq-go-limiter&max=500)
 
 ## Licensing
 
 This package is licensed under the [MIT license](https://opensource.org/license/mit). You are free to use, modify, and distribute it, as long as you follow the terms of the license. You can find the full license text in the repository - [Full MIT license text](https://github.com/hueristiq/hq-go-limiter/blob/master/LICENSE).
-
-## Credits
-
-### Contributors
-
-A huge thanks to all the contributors who have helped make `hq-go-limiter` what it is today!
-
-[![contributors](https://contrib.rocks/image?repo=hueristiq/hq-go-limiter&max=500)](https://github.com/hueristiq/hq-go-limiter/graphs/contributors)
-
-### Similar Projects
-
-If you're interested in more packages like this, check out:
-
-[Uber's ratelimit](https://github.com/uber-go/ratelimit) ◇ [Project Discovery's ratelimit](https://github.com/projectdiscovery/ratelimit)

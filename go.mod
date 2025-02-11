@@ -1,3 +1,3 @@
-module github.com/hueristiq/hq-go-limiter
+module go.source.hueristiq.com/limiter
 
-go 1.23.1
+go 1.23.3
