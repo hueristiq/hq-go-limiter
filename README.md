@@ -16,7 +16,7 @@ A [Go(Golang)](https://golang.org/) package for handling rate limiting.
 ## Usage
 
 ```bash
-go get -v -u go.source.hueristiq.com/limiter
+go get -v -u github.com/hueristiq/hq-go-limiter
 ```
 
 Here's a simple example demonstrating how to use `hq-go-limiter`:
@@ -26,16 +26,16 @@ package main
 
 import (
 	"fmt"
-	"go.source.hueristiq.com/limiter"
+	hqgolimiter "github.com/hueristiq/hq-go-limiter"
 )
 
 func main() {
-	options := &limiter.Options{
+	options := &hqgolimiter.Options{
 		RequestsPerMinute: 40,
 		MinimumDelayInSeconds: 2,
 	}
 
-	ltr := limiter.New(options)
+	ltr := hqgolimiter.New(options)
 
 	// Make 10 requests and ensure that they are rate limited.
 	for i := 1; i <= 10; i++ {
