@@ -6,20 +6,25 @@ A [Go(Golang)](https://golang.org/) package for handling rate limiting.
 
 ## Resource
 
-* [Features](#features)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Licensing](#licensing)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Licensing](#licensing)
 
 ## Features
 
-## Usage
+## Installation
+
+To install `hq-go-limiter`, run:
 
 ```bash
 go get -v -u github.com/hueristiq/hq-go-limiter
 ```
 
-Here's a simple example demonstrating how to use `hq-go-limiter`:
+Make sure your Go environment is set up properly (Go 1.x or later is recommended).
+
+## Usage
 
 ```go
 package main
