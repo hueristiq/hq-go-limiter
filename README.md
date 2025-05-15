@@ -2,24 +2,29 @@
 
 ![made with go](https://img.shields.io/badge/made%20with-Go-1E90FF.svg) [![go report card](https://goreportcard.com/badge/github.com/hueristiq/hq-go-limiter)](https://goreportcard.com/report/github.com/hueristiq/hq-go-limiter) [![license](https://img.shields.io/badge/license-MIT-gray.svg?color=1E90FF)](https://github.com/hueristiq/hq-go-limiter/blob/master/LICENSE) ![maintenance](https://img.shields.io/badge/maintained%3F-yes-1E90FF.svg) [![open issues](https://img.shields.io/github/issues-raw/hueristiq/hq-go-limiter.svg?style=flat&color=1E90FF)](https://github.com/hueristiq/hq-go-limiter/issues?q=is:issue+is:open) [![closed issues](https://img.shields.io/github/issues-closed-raw/hueristiq/hq-go-limiter.svg?style=flat&color=1E90FF)](https://github.com/hueristiq/hq-go-limiter/issues?q=is:issue+is:closed) [![contribution](https://img.shields.io/badge/contributions-welcome-1E90FF.svg)](https://github.com/hueristiq/hq-go-limiter/blob/master/CONTRIBUTING.md)
 
-A [Go(Golang)](https://golang.org/) package for handling rate limiting.
+A [Go (Golang)](https://golang.org/) package for handling rate limiting.
 
 ## Resource
 
-* [Features](#features)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Licensing](#licensing)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [Licensing](#licensing)
 
 ## Features
 
-## Usage
+## Installation
+
+To install `hq-go-limiter`, run:
 
 ```bash
 go get -v -u github.com/hueristiq/hq-go-limiter
 ```
 
-Here's a simple example demonstrating how to use `hq-go-limiter`:
+Make sure your Go environment is set up properly (Go 1.x or later is recommended).
+
+## Usage
 
 ```go
 package main
